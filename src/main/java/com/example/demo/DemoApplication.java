@@ -24,6 +24,7 @@ public class DemoApplication {
 		return builder.routes()
 			.route("product", r -> r.path("/api/**")
 			.filters(f -> f.stripPrefix(1))
+			// .uri("https://spring-boot-rabbitmq-producer-davesmith921016-dev.apps.sandbox-m3.1530.p1.openshiftapps.com"))
 			.uri("lb://PRODUCER-SERVICE"))
 			.build();
 	}
